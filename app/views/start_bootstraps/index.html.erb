@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Start Bootstraps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @start_bootstraps.each do |start_bootstrap| %>
+      <tr>
+        <td><%= link_to 'Show', start_bootstrap %></td>
+        <td><%= link_to 'Edit', edit_start_bootstrap_path(start_bootstrap) %></td>
+        <td><%= link_to 'Destroy', start_bootstrap, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Start Bootstrap', new_start_bootstrap_path %>
